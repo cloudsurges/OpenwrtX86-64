@@ -67,7 +67,21 @@ jobs:
         chmod +x $DIY_P1_SH
         cd openwrt
         $GITHUB_WORKSPACE/$DIY_P1_SH
+    - name: Import external feeds
+      working-directory: ./openwrt
+      run: |
+        git clone https://github.com/kenzok8/openwrt-packages/tree/master/luci-app-koolproxyR package/koolproxyR
+        git clone https://github.com/xiaorouji/openwrt-passwall.git  package/passwall
+        git clone https://github.com/coolsnowwolf/lede/tree/master/package/lean/adbyby package/adbyby
 
+    #-name: Import feeds
+     #run: |
+        ######添加自定义源（可选）##########
+        #cat >> feeds.conf.default <<EOF
+        #src-git kenzo https://github.com/kenzok8/openwrt-packages
+        #src-git passwall https://github.com/xiaorouji/openwrt-passwall
+        #src-git nas https://github.com/linkease/nas-packages.git
+        #EOF
     - name: Update feeds
       run: cd openwrt && ./scripts/feeds update -a
 
