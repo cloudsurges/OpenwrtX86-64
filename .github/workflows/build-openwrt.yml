@@ -109,7 +109,6 @@ jobs:
         sed -i 's/^[ \t]*//g' ./.config
         make defconfig
 
-
     - name: Load custom configuration
       run: |
         [ -e files ] && mv files openwrt/files
