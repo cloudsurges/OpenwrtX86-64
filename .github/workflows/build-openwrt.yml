@@ -110,7 +110,9 @@ jobs:
         # CONFIG_PACKAGE_dnsmasq is not set
         CONFIG_PACKAGE_dnsmasq-full=y
         EOF
-        sed -i 's/^[ \t]*//g' openwrt/.config
+        sed -i 's/^[ \t]*//g'./.config
+        echo "##################.config配置文件信息##################"
+        cat openwrt/.config
         #make defconfig
 
     - name: SSH connection to Actions
