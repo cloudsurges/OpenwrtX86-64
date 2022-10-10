@@ -103,13 +103,10 @@ jobs:
       run: |
         #rm -f ./.config*
         #touch ./.config
-        cat >> .config <<EOF
+        cat >> openwrt/.config <<EOF
         CONFIG_TARGET_x86=y
         CONFIG_TARGET_x86_64=y
         CONFIG_TARGET_x86_64_Generic=y
-        CONFIG_KERNEL_BUILD_USER="OpenWrt-CI"
-        # CONFIG_PACKAGE_dnsmasq is not set
-        CONFIG_PACKAGE_dnsmasq-full=y
         EOF
         sed -i 's/^[ \t]*//g' openwrt/.config
         echo "##################.config配置文件信息##################"
