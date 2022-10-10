@@ -103,7 +103,7 @@ jobs:
       run: |
         openwrt/scripts/diffconfig.sh >defconfig
         cat defconfig >> .config
-        make defconfig
+        #make defconfig
         cat defconfig
         cat >> openwrt/.config <<EOF
         CONFIG_TARGET_x86=y
