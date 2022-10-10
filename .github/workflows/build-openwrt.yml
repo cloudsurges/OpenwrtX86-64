@@ -111,7 +111,7 @@ jobs:
         CONFIG_PACKAGE_dnsmasq-full=y
         EOF
         sed -i 's/^[ \t]*//g' ./.config
-        #make defconfig
+        make defconfig
 
     - name: SSH connection to Actions
       uses: P3TERX/ssh2actions@v1.0.0
