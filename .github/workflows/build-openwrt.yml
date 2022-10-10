@@ -101,8 +101,10 @@ jobs:
        
     - name: Generate configuration file
       run: |
-        #rm -f ./.config*
-        #touch ./.config
+        scripts/diffconfig.sh >defconfig
+        cat defconfig >> .config
+        make defconfig
+        cat defconfig
         cat >> openwrt/.config <<EOF
         CONFIG_TARGET_x86=y
         CONFIG_TARGET_x86_64=y
