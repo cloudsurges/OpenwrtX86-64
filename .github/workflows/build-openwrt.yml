@@ -101,10 +101,6 @@ jobs:
        
     - name: Generate configuration file
       run: |
-        openwrt/scripts/diffconfig.sh >defconfig
-        cat defconfig >> .config
-        #make defconfig
-        cat defconfig
         cat >> openwrt/.config <<EOF
         CONFIG_TARGET_x86=y
         CONFIG_TARGET_x86_64=y
@@ -113,7 +109,7 @@ jobs:
         sed -i 's/^[ \t]*//g' openwrt/.config
         echo "##################.config配置文件信息##################"
         cat openwrt/.config
-        #make defconfig
+        cd openwrt && make defconfig
 
     - name: SSH connection to Actions
       uses: P3TERX/ssh2actions@v1.0.0
