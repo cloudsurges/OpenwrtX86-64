@@ -101,7 +101,7 @@ jobs:
        
     - name: Generate configuration file
       run: |
-        scripts/diffconfig.sh >defconfig
+        openwrt/scripts/diffconfig.sh >defconfig
         cat defconfig >> .config
         make defconfig
         cat defconfig
