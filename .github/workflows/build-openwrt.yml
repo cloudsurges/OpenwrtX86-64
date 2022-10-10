@@ -101,9 +101,9 @@ jobs:
        
     - name: Generate configuration file
       run: |
-        cat >> openwrt/.config <<EOF
-        CONFIG_TARGET_x86_64_Generic=y
-        EOF
+        #cat >> openwrt/.config <<EOF
+        #CONFIG_TARGET_x86_64_Generic=y
+        #EOF
         sed -i 's/^[ \t]*//g' openwrt/.config
         echo "##################.config配置文件信息##################"
         cat openwrt/.config
