@@ -111,7 +111,7 @@ jobs:
         # CONFIG_PACKAGE_dnsmasq is not set
         CONFIG_PACKAGE_dnsmasq-full=y
         EOF
-        sed -i 's/^[ \t]*//g'./.config
+        sed -i 's/^[ \t]*//g' ./.config
         echo "##################.config配置文件信息##################"
         cat openwrt/.config
         #make defconfig
