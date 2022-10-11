@@ -107,6 +107,7 @@ jobs:
         #sed -i 's/^[ \t]*//g' openwrt/.config
         #echo "##################.config配置文件信息##################"
         cat openwrt/.config
+        cd openwrt && make dirclean
         #cd openwrt && make defconfig
 
     - name: SSH connection to Actions
