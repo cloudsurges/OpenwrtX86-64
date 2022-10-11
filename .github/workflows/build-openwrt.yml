@@ -104,10 +104,10 @@ jobs:
         #cat >> openwrt/.config <<EOF
         #CONFIG_TARGET_x86_64_Generic=y
         #EOF
-        sed -i 's/^[ \t]*//g' openwrt/.config
-        echo "##################.config配置文件信息##################"
+        #sed -i 's/^[ \t]*//g' openwrt/.config
+        #echo "##################.config配置文件信息##################"
         cat openwrt/.config
-        cd openwrt && make defconfig
+        #cd openwrt && make defconfig
 
     - name: SSH connection to Actions
       uses: P3TERX/ssh2actions@v1.0.0
