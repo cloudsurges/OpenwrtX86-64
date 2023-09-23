@@ -68,14 +68,14 @@ jobs:
         cd openwrt
         $GITHUB_WORKSPACE/$DIY_P1_SH
 
-    - name: Import external feeds
-      working-directory: ./openwrt
-      run: |
-        #git clone https://github.com/kenzok8/openwrt-packages.git package/koolproxyR
-        git clone https://github.com/kenzok8/small-package.git package/koolproxyR
-        git clone https://github.com/xiaorouji/openwrt-passwall.git  package/passwall
-        #git clone -b luci https://github.com/xiaorouji/openwrt-passwall.git package/luci-app-passwall
-        git clone https://github.com/coolsnowwolf/lede.git/ package/adbyby
+    #- name: Import external feeds
+    #  working-directory: ./openwrt
+    #  run: |
+    #    #git clone https://github.com/kenzok8/openwrt-packages.git package/koolproxyR
+    #    git clone https://github.com/kenzok8/small-package.git package/koolproxyR
+    #    git clone https://github.com/xiaorouji/openwrt-passwall.git  package/passwall
+    #    #git clone -b luci https://github.com/xiaorouji/openwrt-passwall.git package/luci-app-passwall
+    #    git clone https://github.com/coolsnowwolf/lede.git/ package/adbyby
 
     #-name: Import feeds
      #run: |
