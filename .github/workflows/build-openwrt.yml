@@ -99,15 +99,15 @@ jobs:
         cd openwrt
         $GITHUB_WORKSPACE/$DIY_P2_SH   
        
-    - name: Generate configuration file
-      run: |
-        #cat >> openwrt/.config <<EOF
-        #CONFIG_TARGET_x86_64_Generic=y
-        #EOF
-        #sed -i 's/^[ \t]*//g' openwrt/.config
-        #echo "##################.config配置文件信息##################"
-        cat openwrt/.config
-        #cd openwrt && make defconfig
+    #- name: Generate configuration file
+    #  run: |
+    #    #cat >> openwrt/.config <<EOF
+    #    #CONFIG_TARGET_x86_64_Generic=y
+    #    #EOF
+    #    #sed -i 's/^[ \t]*//g' openwrt/.config
+    #    #echo "##################.config配置文件信息##################"
+    #    cat openwrt/.config
+    #    #cd openwrt && make defconfig
 
     - name: SSH connection to Actions
       uses: P3TERX/ssh2actions@v1.0.0
