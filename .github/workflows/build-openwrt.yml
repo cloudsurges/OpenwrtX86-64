@@ -74,10 +74,13 @@ jobs:
     #    #git clone https://github.com/kenzok8/openwrt-packages.git package/koolproxyR
     #    git clone https://github.com/kenzok8/small-package.git package/koolproxyR
     #    git clone https://github.com/xiaorouji/openwrt-passwall.git  package/passwall
-    #    #git clone -b luci https://github.com/xiaorouji/openwrt-passwall.git package/luci-app-passwall
+         #git clone -b luci https://github.com/xiaorouji/openwrt-passwall.git package/luci-app-passwall
     #    git clone https://github.com/coolsnowwolf/lede.git/ package/adbyby
-         git clone https://github.com/openwrt/openwrt
-         git clone https://github.com/coolsnowwolf/lede
+         git clone https://github.com/openwrt/openwrt package/openwrt
+         git clone https://github.com/coolsnowwolf/lede package/lede
+         git clone https://github.com/kenzok8/small-package package/small-package
+         git clone https://github.com/xiaorouji/openwrt-passwall.git package/luci-app-passwall
+         
 
     #-name: Import feeds
      #run: |
