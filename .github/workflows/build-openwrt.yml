@@ -50,6 +50,8 @@ jobs:
         sudo mkdir -p /workdir
         sudo chown $USER:$GROUPS /workdir
         export FORCE_UNSAFE_CONFIGURE=1
+        export GO111MODULE=on
+        export GOPROXY=https://goproxy.cn,direct
 
     - name: Check space
       if: (!cancelled())
