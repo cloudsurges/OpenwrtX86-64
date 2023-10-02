@@ -74,13 +74,12 @@ jobs:
     - name: Import external feeds
       working-directory: ./openwrt
       run: |
-         #git clone https://github.com/kenzok8/openwrt-packages.git package/koolproxyR
-         #git clone https://github.com/kenzok8/small-package.git package/koolproxyR
          #git clone https://github.com/xiaorouji/openwrt-passwall.git  package/passwall
          #git clone -b luci https://github.com/xiaorouji/openwrt-passwall.git package/luci-app-passwall
-         #git clone https://github.com/coolsnowwolf/lede.git/ package/adbyby
-         git clone https://github.com/openwrt/openwrt package/openwrt
-         git clone https://github.com/coolsnowwolf/lede package/lede
+         git clone https://github.com/openwrt/openwrt openwrt
+         #git clone https://github.com/coolsnowwolf/lede package/lede
+         git clone https://github.com/kenzok8/openwrt-packages.git package/packages
+         git clone https://github.com/kenzok8/small-package.git package/small-package
          #git clone https://github.com/kenzok8/small-package package/small-package
          #git clone https://github.com/xiaorouji/openwrt-passwall.git package/luci-app-passwall
          git clone https://github.com/1wrt/luci-app-ikoolproxy.git package/luci-app-ikoolproxy
